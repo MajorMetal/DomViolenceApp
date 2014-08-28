@@ -1,0 +1,14 @@
+<%= form_for(@shelter) do |f| %>
+
+<h1>Edit Shelter</h1>
+				
+	<%= f.text_field :name, placeholder: "Name" %><br/>
+	<%= f.text_field :city , placeholder: "City" %><br/>
+	<%= f.text_field :contact_phone , placeholder: "Contact Phone" %><br/>
+	<%= f.text_field :contact_email , placeholder: "Contact Email" %><br/>
+	<%= link_to 'Back', shelters_path , :class => "btn btn-primary" %>
+	<%=  f.submit class: "btn btn-success" %>
+		
+	    
+
+<% end %>

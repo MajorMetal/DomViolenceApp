@@ -1,36 +1,37 @@
 Rails.application.routes.draw do
 
-# root 'shelters#index'
+root 'sessions#new'
 
-root :to =>'shelter#index'
+#root :to =>'shelter#index'
 
-  # get 'signup' => 'users#new', as: :sign_up
+   get 'signup' => 'victims#new', as: :sign_up
   # post  'signup' => 'users#create'
   
-  # get 'signin' => 'sessions#new', as: :sign_in
+   get 'signin' => 'sessions#new', as: :sign_in
   # post 'signin' => 'sessions#create'
   # delete 'signout' => 'sessions#delete', as: :sign_out
   
-  # resources :sessions, only: [:create]
+   resources :sessions, only: [:create]
 
+   get 'shelters/' => 'shelters#index'
 
    get 'shelters/new' => 'shelters#new'
 
-  # post 'shelters' => 'shelters#create'
+   post 'shelters' => 'shelters#create'
 
-  # get 'shelters/:id' => 'shelters#show', as: :shelter
+   get 'shelters/:id' => 'shelters#show', as: :shelter
 
-  # get 'shelters/:id/edit' => 'users#edit'
+   get 'victims/:id/edit' => 'victims#edit'
 
-  # get 'shelters/edit'
+   get 'shelters/edit' => 'shelters#edit'
 
-  # get 'shelters/update'
+   patch 'shelters/update' => 'shelters#update'
 
-  # get 'shelters/destroy'
 
-  # get 'users/' => 'users#index'
+   get 'shelters/destroy'
 
-  # delete 'users/:id' => 'users#destroy'
+
+  delete 'victims/:id' => 'victims#destroy'
 
   # get 'vevents' => 'signups#index', as: :vevents
 
@@ -40,7 +41,7 @@ root :to =>'shelter#index'
 
   # get 'vevents' => 'signups#show'
 
-  # resources :users
+  resources :victims
   resources :shelters
  
 
