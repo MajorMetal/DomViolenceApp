@@ -1,0 +1,9 @@
+<%= form_for(@signup, url: zshelter_path) do |f| %>
+
+
+<%= f.hidden_field :victim_id, :value => @victim_id %>
+<%= f.hidden_field :shelter_id, :value => @shelter_id %>
+
+<%= f.submit "Confirm for shelter", class: "btn btn-large btn-primary" %>
+
+<% end %>

@@ -11,3 +11,5 @@ class CreateShelters < ActiveRecord::Migration
     end
   end
 end
+
+

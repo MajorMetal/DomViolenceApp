@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+
+root 'victims#index'
+
 # root 'shelters#index'
 
-root :to =>'shelter#index'
 
   # get 'signup' => 'users#new', as: :sign_up
   # post  'signup' => 'users#create'
@@ -14,23 +16,21 @@ root :to =>'shelter#index'
   # resources :sessions, only: [:create]
 
 
-   get 'shelters/new' => 'shelters#new'
+  get 'shelters/new' => 'shelters#new'
 
-  # post 'shelters' => 'shelters#create'
+  post 'shelters' => 'shelters#create'
 
-  # get 'shelters/:id' => 'shelters#show', as: :shelter
+  get 'shelters/:id' => 'shelters#show', as: :shelter
 
-  # get 'shelters/:id/edit' => 'users#edit'
+  get 'victims/:id/edit' => 'victims#edit'
 
-  # get 'shelters/edit'
+  get 'shelters/edit' => 'shelters#edit'
 
-  # get 'shelters/update'
+  patch 'shelters/update' => 'shelters#update'
 
-  # get 'shelters/destroy'
+  get 'shelters/destroy'
 
-  # get 'users/' => 'users#index'
-
-  # delete 'users/:id' => 'users#destroy'
+  delete 'victims/:id' => 'victims#destroy'
 
   # get 'vevents' => 'signups#index', as: :vevents
 
@@ -40,7 +40,7 @@ root :to =>'shelter#index'
 
   # get 'vevents' => 'signups#show'
 
-  # resources :users
+  resources :victims
   resources :shelters
  
 

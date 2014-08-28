@@ -1,0 +1,45 @@
+<div class="logInForm">
+
+    <div class="addShelterInput">
+        <h1>Are You A New Client?</h1>
+
+          <div class="row">
+            <%= form_for(@victim) do |f| %>
+
+			  <% if @uvictim.errors.any? %>
+			    <div id="error_explanation">
+			      <%= pluralize(@victim.errors.count, "error") %> prohibited this victim from being saved:
+			      <ul>
+			        <% @victim.errors.full_messages.each do |message| %>
+			        <li><%= message %></li>
+			        <% end %>
+			      </ul>
+			    </div>
+			  <% end %>
+				<%= f.text_field :name, placeholder: 'Name'%><br/>
+				<%= f.text_field :email, placeholder: 'Email'%><br/>
+				<%= f.text_field :password, placeholder: 'Password'%><br/>
+				<%= f.text_field :password_confirmation, placeholder: 'Confirm Password'%><br/>
+				<%= f.submit "Create Account", class: "btn btn-info" %>
+				<% end %>
+      	</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
