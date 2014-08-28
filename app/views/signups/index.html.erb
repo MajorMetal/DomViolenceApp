@@ -1,0 +1,11 @@
+<h1>Here are the shelters for you</h1>
+	
+	<% @zshelters.each do |zshelter| %>
+		<%= link_to zshelter do %>
+			<div>
+				<p><%= Shelter.find(zshelter.shelter_id).name %> </p>
+
+			</div>
+		<% end %>	
+	<% end %>
+</div>

@@ -1,0 +1,13 @@
+<h1>Edit Your Account</h1>
+
+<%= form_for(@victim) do |f| %>
+
+	<%= f.text_field :name, placeholder: 'Update Name'%>
+	<%= f.text_field :email, placeholder: 'Update Email'%>
+	<%= f.text_field :password, placeholder: 'Update Password'%>
+	<%= f.text_field :password_confirmation, placeholder: 'Confirm New Password'%>
+	<%= f.submit %>
+
+	<%= link_to 'Delete You Account', @victim, method: :delete, data: { confirm: 'Are you sure?' } %> 
+
+<% end %>

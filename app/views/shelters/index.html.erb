@@ -2,8 +2,10 @@
 
 
 
+
 <h1>Shelters Near You</h1>
 	<%= link_to "Add New Shelter", ( new_shelter_path ), class: "btn btn-primary" %>
+
 	<% @shelters.each do |shelter| %>
 		<%= link_to shelter do %>
 			<div>
@@ -15,4 +17,6 @@
 			</div>
 
 		<% end %>	
+
 	<% end %>
+

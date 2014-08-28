@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
 	def new
 		if signed_in?
 			redirect_to current_victim
@@ -19,5 +20,6 @@ class SessionsController < ApplicationController
 		sign_out
 		redirect_to root_url
 	end	
+
 
 end

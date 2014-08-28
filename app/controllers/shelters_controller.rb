@@ -40,18 +40,9 @@ def destroy
     redirect_to shelters_path
  end
 
-
-
-
-
-
-
-
-
-
-
 private
 	def shelter_params
 		params.require(:shelter).permit(:name, :city, :zip, :contact_phone, :contact_email)
 	end	
 end
+

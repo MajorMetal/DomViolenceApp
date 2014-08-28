@@ -1,5 +1,6 @@
 module SessionsHelper
 
+
 	def sign_in(victim)
 		remember_token = Victim.new_remember_token
 		cookies.permanent[:remember_token] = remember_token
@@ -40,6 +41,7 @@ module SessionsHelper
 		cookies.delete(:remember_token)
 		self.current_victim = nil
 	end		
+
 
 
 end
