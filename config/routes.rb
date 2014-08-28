@@ -3,15 +3,15 @@ Rails.application.routes.draw do
 
 root 'sessions#new'
 
-#root :to =>'shelter#index'
+
 
 
    get 'signup' => 'victims#new', as: :sign_up
-  # post  'signup' => 'users#create'
+   post  'signup' => 'victims#create'
   
    get 'signin' => 'sessions#new', as: :sign_in
-  # post 'signin' => 'sessions#create'
-  # delete 'signout' => 'sessions#delete', as: :sign_out
+   post 'signin' => 'sessions#create'
+  delete 'signout' => 'sessions#delete', as: :sign_out
   
    resources :sessions, only: [:create]
 

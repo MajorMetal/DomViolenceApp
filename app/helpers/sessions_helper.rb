@@ -22,6 +22,8 @@ module SessionsHelper
 		@current_victim = victim
 	end
 
+
+
 	def current_victim
 		remember_token = Victim.digest(cookies[:remember_token])
 		@current_victim ||= Victim.find_by(remember_token: remember_token)
