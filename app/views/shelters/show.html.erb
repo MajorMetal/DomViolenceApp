@@ -10,7 +10,8 @@
       <p><%= @shelter.contact_email %></p>
        <%= link_to 'Back', shelters_path, :class => "btn btn-primary" %>
        <%= link_to 'Edit', edit_shelter_path, :class => "btn btn-warning" %>
-       <%= link_to 'Destroy', @shelter, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+       <%= link_to 'Choose A shelter', new_zshelter_path(@shelter), :class => "btn btn-success" %>
+      
       
  
 

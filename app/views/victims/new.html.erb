@@ -6,7 +6,7 @@
           <div class="row">
             <%= form_for(@victim) do |f| %>
 
-			  <% if @uvictim.errors.any? %>
+			  <% if @victim.errors.any? %>
 			    <div id="error_explanation">
 			      <%= pluralize(@victim.errors.count, "error") %> prohibited this victim from being saved:
 			      <ul>

@@ -1,4 +1,4 @@
 <h1>Thank you!  We want to help to keep you safe, <%= @victim.name %>! </h1>
-<%= link_to "Here are the shelters for you", vevents_path %><br/>
+<%= link_to "Here are the shelters for you", zshelters_path %><br/>
 
-<%= link_to "Seeking a Shelter to keep you safe", events_path %> | <%= link_to 'Edit Your Profile', edit_user_path %> | <%= link_to 'Delete You Account', @victim, method: :delete, data: { confirm: 'Are you sure?' } %> 
+<%= link_to "Seeking a Shelter to keep you safe", shelters_path %> | <%= link_to 'Edit Your Profile', edit_victim_path %> | <%= link_to 'Delete You Account', @victim, method: :delete, data: { confirm: 'Are you sure?' } %> 

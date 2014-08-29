@@ -9,7 +9,7 @@ end
 def new
 	@signup = Signup.new
 	@shelter_id = params[:format]
-	@victim_id = current_user.id
+	@victim_id = current_victim.id
 end
 
 

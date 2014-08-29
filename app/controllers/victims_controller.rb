@@ -14,7 +14,7 @@ def new
   else 
       @victim = Victim.new
   end
- end 
+  
 end
 
 def create
@@ -22,14 +22,12 @@ def create
 
   if @victim.save
     sign_in @victim
-     @victim = Victim.all
+     @victims = Victim.all
       redirect_to @victim
   else
       render action: 'new'
   end
- end
 end
-
 
 def edit
     @victim = Victim.find(params[:id])
@@ -79,7 +77,6 @@ private
 
 
 
+
+
 end
-
-
-
