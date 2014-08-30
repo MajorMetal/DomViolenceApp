@@ -1,5 +1,5 @@
 class Shelter < ActiveRecord::Base
-	has_many :victims, through: :signups
 	has_many :signups
-	belongs_to :victims
+	has_many :victims, through: :signups
+	
 end

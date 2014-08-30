@@ -31,7 +31,7 @@ root 'sessions#new'
    patch 'shelters/update' => 'shelters#update'
 
 
-   get 'shelters/destroy'
+   delete 'shelters/destroy'
 
 
 
@@ -43,7 +43,7 @@ root 'sessions#new'
 
    post 'zshelters' => 'signups#create'
 
-   get 'zshelters' => 'signups#show'
+   get 'zshelters/:id' => 'signups#show', as: :zshelter
 
   resources :victims
   resources :shelters

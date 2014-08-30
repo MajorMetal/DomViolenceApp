@@ -1,8 +1,8 @@
 class Victim < ActiveRecord::Base
 
-has_many :shelters, through: :signups
 has_many :signups
-belongs_to :shelters
+has_many :shelters, through: :signups
+
 
 
 VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i

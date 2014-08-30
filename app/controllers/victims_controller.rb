@@ -54,9 +54,9 @@ end
 
 
   def destroy
-    @s = Victim.find(params[:id])
+    @victim = Victim.find(params[:id])
     @victim.destroy
-    redirect_to shelter_path
+    redirect_to root_path
   end
 
 
