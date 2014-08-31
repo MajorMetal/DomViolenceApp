@@ -1,17 +1,17 @@
 <div class="logInForm">
 
     <div class="addShelterInput">
-        <h1>Are You A New Client?</h1>
+        <h1 class="class1">Are You A New Client? </h1>
 
           <div class="row">
             <%= form_for(@victim) do |f| %>
 
 			  <% if @victim.errors.any? %>
-			    <div id="error_explanation">
+			    <div class="class2" id="error_explanation">
 			      <%= pluralize(@victim.errors.count, "error") %> prohibited this victim from being saved:
 			      <ul>
 			        <% @victim.errors.full_messages.each do |message| %>
-			        <li><%= message %></li>
+			        <li class="class3"><%= message %></li>
 			        <% end %>
 			      </ul>
 			    </div>

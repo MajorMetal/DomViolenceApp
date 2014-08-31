@@ -1,22 +1,17 @@
 Rails.application.routes.draw do
 
-
 root 'sessions#new'
-
-
-
 
    get 'signup' => 'victims#new', as: :sign_up
    post  'signup' => 'victims#create'
   
    get 'signin' => 'sessions#new', as: :sign_in
    post 'signin' => 'sessions#create'
-  delete 'signout' => 'sessions#delete', as: :sign_out
+   delete 'signout' => 'sessions#delete', as: :sign_out
   
    resources :sessions, only: [:create]
 
    get 'shelters/' => 'shelters#index'
-
 
    get 'shelters/new' => 'shelters#new'
 
@@ -33,9 +28,7 @@ root 'sessions#new'
 
    delete 'shelters/destroy'
 
-
-
-  delete 'victims/:id' => 'victims#destroy'
+   delete 'victims/:id' => 'victims#destroy'
 
    get 'zshelters' => 'signups#index', as: :zshelters
 
@@ -48,10 +41,6 @@ root 'sessions#new'
   resources :victims
   resources :shelters
  
-
-
-
-
 
 
 
