@@ -3,7 +3,7 @@
 	<% @zshelters.each do |zshelter| %>
 		<%= link_to zshelter do %>
 			<div>
-				<p><%= Shelter.find(@signup).name %> </p>
+				<p><%= Shelter.find(zshelter.shelter_id).name %> </p>
 
 			</div>
 		<% end %>	

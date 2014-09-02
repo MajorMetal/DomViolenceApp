@@ -2,21 +2,28 @@
 
 
 
+	<div>
+    <h1 id="sheltEdit">Shelters Near You</h1>
+	</div>
+	
+	
+	
+<% @shelters.each do |shelter| %>
+	<%= link_to shelter do %>
+	<div class="eventTile">
+		
+		<%= shelter.name %><br/>
+		<%= shelter.city %><br/>
+		<%= shelter.contact_phone %><br/>
+		<%= shelter.zip %><br/>
+		
+	</div>
+		
+	<% end %>
+			
+			
 
-<h1>Shelters Near You</h1>
-	<%= link_to "Add New Shelter", ( new_shelter_path ), class: "btn btn-primary" %>
-
-	<% @shelters.each do |shelter| %>
-		<%= link_to shelter do %>
-			<div>
-				<h3><%= shelter.name %></h3>
-				<p><%= shelter.city %></p>
-				<p><%= shelter.zip %></p>
-				<p><%= shelter.contact_phone %></p>
-				<p><%= shelter.contact_email %></p>
-			</div>
-
-		<% end %>	
+			
 
 	<% end %>
 

@@ -1,16 +1,15 @@
 
 
-
-  <h1><%= @shelter.name %></h1>
-
-        
-      <p><%= @shelter.city %></p>
+	<div class="formTile">
+      <h1><%= @shelter.name %></h1>
+  	  <p><%= @shelter.city %></p>
       <p><%= @shelter.zip %></p>
       <p><%= @shelter.contact_phone %></p>
       <p><%= @shelter.contact_email %></p>
        <%= link_to 'Back', shelters_path, :class => "btn btn-primary" %>
        <%= link_to 'Edit', edit_shelter_path, :class => "btn btn-warning" %>
-       <%= link_to 'Choose A shelter', new_zshelter_path(@shelter), :class => "btn btn-success" %>
+       <%= link_to 'Choose this shelter', new_zshelter_path(@shelter), :class => "btn btn-success" %>
+     </div>  
       
       
  

@@ -1,15 +1,19 @@
 
 	
 		
-			<%= form_for(@shelter) do |f| %>
-
-				<h1>Add New Shelter</h1>
-				<%= f.text_field :name, placeholder: "Name" %><br/>
-				<%= f.text_field :city , placeholder: "City" %><br/>
-				<%= f.text_field :contact_phone , placeholder: "Contact Phone" %><br/>
-				<%= f.text_field :contact_email , placeholder: "Contact Email" %><br/>
-				<%= link_to 'Back', shelters_path , :class => "btn btn-primary" %>
-				<%=  f.submit class: "btn btn-success" %>
+<%= form_for(@shelter) do |f| %>
+	<div class="formTile">
+	   <div class="form-group">
+		<h1>Add New Shelter</h1>
+		<%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+		<%= f.text_field :city , placeholder: "City", class: "form-control" %>
+		<%= f.text_field :zip , placeholder: "Zipcode", class: "form-control" %>
+		<%= f.text_field :contact_phone , placeholder: "Contact Phone", class: "form-control" %>
+		<%= f.text_field :contact_email , placeholder: "Contact Email", class: "form-control" %>
+		<%= link_to 'Back', shelters_path , :class => "btn btn-primary" %>
+		<%=  f.submit class: "btn btn-success" %>
+	   </div>
+	</div>	
 		
 	    
 

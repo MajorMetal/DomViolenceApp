@@ -1,4 +1,8 @@
-<h1>Thank you!  We want to help to keep you safe, <%= @victim.name %>! </h1>
-<%= link_to "Here are the shelters for you", zshelters_path %><br/>
 
-<%= link_to "Seeking a Shelter to keep you safe", shelters_path %> | <%= link_to 'Edit Your Profile', edit_victim_path %> | <%= link_to 'Delete You Account', @victim, method: :delete, data: { confirm: 'Are you sure?' } %> 
+<div class="formTile">
+<h2>Thank you <%= @victim.name %>! We want to help to keep you safe, </h2>
+<%= link_to "Your Shelters", zshelter_path, class: "btn btn-primary" %>
+<%= link_to "Choose a Shelter", shelters_path, class: "btn btn-info" %>
+<%= link_to 'Edit Your Profile', edit_victim_path, class: "btn btn-warning" %><br/> 
+<%= link_to 'Delete Your Account', @victim, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+</div> 

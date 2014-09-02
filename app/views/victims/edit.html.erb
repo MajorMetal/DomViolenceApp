@@ -1,13 +1,17 @@
-<h1>Edit Your Account</h1>
+
 
 <%= form_for(@victim) do |f| %>
+<div class="formTile">
+	<div class="form-group">
+		<h2>Edit Your Account</h2>
+		<%= f.text_field :name, placeholder: 'Update Name' , class: "form-control" %>
+		<%= f.text_field :email, placeholder: 'Update Email', class: "form-control"%>
+			<%= f.text_field :password, placeholder: 'Update Password', class: "form-control"%>
+	<%= f.text_field :password_confirmation, placeholder: 'Confirm New Password', class: "form-control"%>
+	</div>
+	<%=f.submit class: "btn btn-success" %>
 
-	<%= f.text_field :name, placeholder: 'Update Name'%>
-	<%= f.text_field :email, placeholder: 'Update Email'%>
-	<%= f.text_field :password, placeholder: 'Update Password'%>
-	<%= f.text_field :password_confirmation, placeholder: 'Confirm New Password'%>
-	<%= f.submit %>
-
-	<%= link_to 'Delete You Account', @victim, method: :delete, data: { confirm: 'Are you sure?' } %> 
+	<%= link_to 'Delete Your Account', @victim, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-danger" %>
+</div>
 
 <% end %>
